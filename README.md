@@ -5,7 +5,9 @@
 ********************************************************************************
 #####Development Method -  Agile Scrum
 ********************************************************************************
-Kanban Board: 
+Kanban Board: [![Stories in Ready](https://badge.waffle.io/Coeus2016/GeospatialDataProcessorVisualiser_documentation.png?label=ready&title=Ready)](https://waffle.io/Coeus2016/GeospatialDataProcessorVisualiser_documentation)
+
+[![Throughput Graph](https://graphs.waffle.io/Coeus2016/GeospatialDataProcessorVisualiser_documentation/throughput.svg)](https://waffle.io/Coeus2016/GeospatialDataProcessorVisualiser_documentation/metrics/throughput) 
 
 Burndown Chart: 
 
