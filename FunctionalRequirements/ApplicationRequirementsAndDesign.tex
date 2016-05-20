@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt, margin=1.5in]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{graphicx}
 \graphicspath{ {../images/} }
 
@@ -19,7 +19,7 @@
 
 	
 	{ \huge \bfseries Application Requirements and Design}\\\HRule \\[0.4cm] % Title of your document
-	\Large \textbf{Real-time Geospatial Data Processor and Visualizer} \\
+	\Large \textbf{Real-time Geospatial Data Processor and Visualiser} \\
 	\small \emph{\textbf{Client: Werner Raath}}
 	\HRule \\[1.5cm]
 	 
@@ -84,27 +84,53 @@
 	%		INTRODUCTION
 	%-------------------------------------------------------------------------------------
 	\section{Introduction}	
+	\input{introduction}
 	
 	%-------------------------------------------------------------------------------------
 	%		VISION
 	%-------------------------------------------------------------------------------------
-	\section{Vision}	
+	\section{Vision}
+	\input{vision}	
 	
 	
 	%-------------------------------------------------------------------------------------
 	%		BACKGROUND
 	%-------------------------------------------------------------------------------------
 	\section{Background}	
+	\input{background}
 	
 	%-------------------------------------------------------------------------------------
 	%		FUNCTIONAL REQUIREMENTS AND APPLICATION DESIGN
 	%-------------------------------------------------------------------------------------
 	
 	\section{Functional Requirements and Application Design}
+	\input{req_section_intro}
+	
+		\subsection{Use Cases}
+		\input{use_cases}
+		
+		\subsection{Use Case Prioritization}
+		\input{use_case_prioritization}
+		
+		\subsection{Modular System}
+		
+			\subsubsection{System Overview}
+			\input{system_overview}
+			
+		%For each use case 
+		%	
+		%Scope
+		%Domain Model	
+		%Process Specifications
+	
+		\subsection{Open Issues}
+		\input{issues}
 	
 	%-------------------------------------------------------------------------------------
 	%		REFERENCES
 	%-------------------------------------------------------------------------------------
 	
 	\section{References}
+	\bibliography{references}
+	
 	\end{document}
