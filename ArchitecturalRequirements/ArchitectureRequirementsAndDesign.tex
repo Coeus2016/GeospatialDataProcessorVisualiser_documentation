@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt, margin=1.5in]{article}
+\documentclass[a4paper,12pt]{article}
 
 \usepackage{graphicx}
 \graphicspath{ {../images/} }
@@ -85,27 +85,53 @@
 	%		INTRODUCTION
 	%-------------------------------------------------------------------------------------
 	\section{Introduction}	
+	\input{introduction}
 	
 	%-------------------------------------------------------------------------------------
-	%		VISION
-	%-------------------------------------------------------------------------------------
-	\section{Vision}	
-	
-	
-	%-------------------------------------------------------------------------------------
-	%		BACKGROUND
-	%-------------------------------------------------------------------------------------
-	\section{Background}	
-	
-	%-------------------------------------------------------------------------------------
-	%		FUNCTIONAL REQUIREMENTS AND APPLICATION DESIGN
+	%		ARCHITECTURE REQUIREMENTS AND APPLICATION DESIGN
 	%-------------------------------------------------------------------------------------
 	
-	\section{Software Architecture Requirements and Design Specifications}
+	\section{Software Architecture Overview}
+	\input{arch_overview}
+	
+	\section{Architecture Requirements}
+	\input{arch_req}
+	
+		\subsection{Architectural Scope}
+		\input{arch_scope}
+
+		\subsection{Quality Requirements}
+		\input{quality_req}
+			
+		\subsection{Integration and Access Channels Requirements}
+		\input{int_acc_req}
+					
+		\subsection{Architectural constraints}
+		\input{arch_constraints}
+	
+	\section{Architectural Patterns}
+	\input{arch_patterns}
+	
+	\section{Architectural Tactics}
+	\input{arch_tactics}
+	
+	\section{Reference Architectures and Frameworks}
+	\input{ref_arch}
+
+	\section{Access and Integration Channels}
+		\subsection{Integration Channels}
+		\input{integration_channels}
+		
+		\subsection{Access Channels}
+		\input{access_channels}
+
+	\section{Technologies}
+	\input{technologies_spec}
 	
 	%-------------------------------------------------------------------------------------
 	%		REFERENCES
 	%-------------------------------------------------------------------------------------
 	
 	\section{References}
+	\bibliography{references}
 	\end{document}
