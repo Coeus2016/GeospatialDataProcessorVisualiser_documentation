@@ -1,0 +1,39 @@
+This section discuses the architectural tactics and strategies that will be used to concretely address the quality requirements.
+
+\paragraph{Performance and scalability}
+\begin{itemize}
+	\item We will make use of the Flyweight design pattern to reduce object creation. This means that the system prefers to use a factory instead of `new' to reuse objects rather than always create new ones. 
+	\item Network load will be balanced with priority queues - where NGINX is inteded to 	be used as it is a very efficient HTTP load balancer. It drastically reduces wait 			times hence excellent for scalability.
+	
+	\item The system will achieve message queueing through RabbitMQ, which implements 		Advanced Messaging Protocol (AMPQ), for processing multiple current messages from the 	same channel from different users. This enhances scalability and availability, thus 		maximizing throughput.
+	
+	\item The Façade pattern will be used to provide a simple interface or API to the complex subsystem - this reduces the network communication requirements which helps with performance and scalability.
+	\item The Proxy pattern will be used to delay the creation of objects until they are actually requested by the client. This is especially helpful when there are resource hungry objects, as the required resources will only be constructed once required. This is important for the scalability requirements.
+\end{itemize}
+
+\paragraph{Appearance and accessibility}
+\begin{itemize}
+	\item User Experience (UX) principles and rules will be followed to ensure that user requirements are met and top quality user-system  interaction is achieved.
+	\item All the proper and recommended standards regarding accessibility will be adhered to - such as always having \textit{alt} tags for images for visually impaired individuals and also allowing control of the page without using a mouse.
+	\item The W3 accessibility standards will be followed.
+\end{itemize}
+
+\paragraph{Robustness}
+\begin{itemize}
+	\item Thorough unit testing will be done to ensure a robust system. 
+	\item Mainly black-box testing will be carried out to ensure that all service contracts provide the services that they should.
+	\item White-box testing will be done in the form of in-line assert statements for critical algorithms.
+	\item Dependency injection will be used to simplify the testing procedure.
+\end{itemize}
+
+\paragraph{Maintainability}
+\begin{itemize}
+	\item The system will extensively utilise dependency injection for the ease of swapping out of components. This swapping of components will enhance maintainability.
+	\item Decoupling of services will be fully implemented at connection/coupling points  between classes to increase maintainability, the system design will strive to favour aggregation and composition over inheritance when a choice exists.
+	\item Decoupling will allow code reuse, enhance maintainability. Interfaces will be provided as connection points to service contracts.
+\end{itemize}
+\paragraph{Security}
+\begin{itemize}
+	\item Data and objects that require high security will be encapsulated and have their access limited within their respective use cases.
+	\item This will be achieved using composition, aggregation and containment/inner classes.
+\end{itemize}
