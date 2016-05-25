@@ -1,0 +1,97 @@
+The quality requirements are the requirements around the quality attributes of the systems and
+the services it provides. This includes requirements like Flexibility, maintainability, scalability, performance, reliability, security, auditabilty, testability, usability, integrability and deployability requirements.
+
+\subsubsection{Flexibility}  
+It is important that the system architecture is designed in such a way that one can easily add different access channels to the system as well a remove old unused or outdated access channels. Furthermore, persistence architectures are evolving at a great rate. The growth of NoSQL databases such as MongoDB and RethinkDB servers as proof of this. In this context it is important that the application functionality is not locked into any specification persistence technology and that one is able to easily modify the persistence provider.
+
+\subsubsection{Maintainability}
+Amongst the most important quality requirements for the system is maintainability. It should be easy to maintain the system in the future. To this end
+\begin{itemize}
+\item future developers should be able to easily understand the system,
+\item the technologies chosen for the system an be reasonably expected to be available for a long time,
+\item and developers should be able to easily and relatively quickly change aspects of the functionality the system provides.
+\end{itemize}
+
+\subsubsection{Scalability}
+The purpose of this system is to be used in the business of disaster management, it should allow
+for easy scaling in all layers. The system must adhere to the following requirements  
+\begin{itemize}
+\item The database should support high availability of data,
+\item messaging should succeed for every CRUD database operation,
+\item and front-end maps should be able to display the geo-spatial information queried by the user.
+\end{itemize}
+
+\subsubsection{Performance}
+Performance is amongst the most important quality requirements for this system. The following requirements must be considered
+\begin{itemize}
+\item messages should be small and only supply the most important data, e.g. descriptions and primary keys that could be used by the client to pull data from the API,
+\item Front-end maps should react responsively without lag between frames, 
+\item the information must be streamed to the user in real-time.
+\end{itemize}
+
+\subsubsection{Reliability}
+A reliable system allows users to use the system with ease. Users should feel that the system is reliable, to this end
+\begin{itemize}
+\item client connections to messaging services should never break,
+\item server and client exceptions should be handled gracefully.
+\end{itemize}
+
+\subsubsection{Security}
+Initially the system needs to support only
+\begin{itemize}
+	\item Users should simply log in and see data relevant to their area of interest. 
+	\item HTTPS connections are optional.	
+\end{itemize}
+In future the system is expected to also enforce confidentiality through encrypted communication and protection against man-in-the-middle attacks through hashing, protect against DOS and DDOS attacks that will stress the servers, and authentication against a chosen user repository (for users who will deploy troops) 
+
+\subsubsection{Auditability}
+The system will log all messages processed by the system including all requests and all responses for all user services provided by the system.
+For each request and response entries the following will be logged
+\begin{itemize}
+	\item Request entries:
+	\begin{itemize}
+		\item an id for the log entry,
+		\item the userId of the user requesting the service,
+		\item the date/time stamp when the request was made,
+		\item the user service requested, and
+		\item the request object stringified as JSON with any sensitive information removed.
+	\end{itemize}
+	
+	\item Response entries:
+	\begin{itemize}
+		\item an id for the log entry,	
+		\item the id of the corresponding request entry,
+		\item the date/time stamp when the response is provided, and the response object stringified as JSON with any sensitive information removed.
+	\end{itemize}
+\end{itemize}
+The system will provide only services to extract information from the audit log and will not allow the audit log to be modified. Audit logs will be directly accessible to both, humans and systems.
+
+\subsubsection{Testability}
+All services offered by the system must be testable through
+\begin{enumerate}
+\item unit tests,
+\item and integration tests
+\end{enumerate}
+
+In either case, these tests should verify that
+\begin{itemize}
+	\item all pre-conditions are met (i.e. that no exception is raised except if one of the pre-conditions for the service is not met), and
+	\item that all post-conditions hold true once the service has been provided.
+\end{itemize}
+
+In addition to functional testing, the quality requirements like scalability, usability, auditability, performance and so on should also be tested.
+
+\subsubsection{Usability}
+Usability is an important quality requirement to consider. The system should be intuitive and efficient to use. Computer literacy is assumed. The time it takes users to find the disaster they're looking for or query a specific disaster should be kept to a minimum. Error handling messages should be self-explanatory and as much as possible of the input validation should be done on the client side.
+
+\subsubsection{Integrability}
+The system should be able to easily address future integration requirements by providing access to its services using widely adopted public standards. All use case which are available to human users should also be accessible from external systems.
+
+\subsubsection{Deployability}
+Deployability is an important requirement to consider when designing a system. The system should be able to run on any of the 3 most used platforms namely Linux, Windows and Mac OS. The system must:
+\begin{itemize}
+	\item run on Linux OS,
+	\item ultimately the system should be packaged as a Docker image which is deployable on a Docker
+container installed on a virtual or physical Linux server.
+\end{itemize}
+
