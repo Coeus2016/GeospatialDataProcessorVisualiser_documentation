@@ -1,0 +1,21 @@
+
+This section of the document outlines the operability of the system running on the server and demonstrates user access and the integration of different technologies. A Web interface will be the single access channel provided to the user. A detailed discussion follows.\\
+\paragraph{Web Interface}
+The web interface will be accessed typically through a personal computer using a browser such as Google Chrome, Mozilla Firefox and Internet explorer to name a few.\\
+The system will be accessed in the following manner:
+\begin{enumerate}
+	\item The user will open a web browser of their choice.
+	\item Click on the web page where the system will be hosted.
+	\item A login page will be displayed.
+	\item After user information validation, the user can then have full access to the information they wish to access, based on the privileges assigned to them during user creation.
+\end{enumerate}
+\subsubsection{Integration Channel Requirements}
+Two servers would be used to achieve data persistence, one for interfacing with the website and a second for interfacing with the third-party API for data downloading. The system will also have to interface with a map database (Open Street Map) for downloading maps that will be overlaid with geospatial data. \\
+\subsubsection{Protocols}
+The only protocol that will be used is HTTP for both the web interface and Android interface. 
+
+
+The figure below is a simplified explanation of the above text.
+\begin{center}
+	\includegraphics[scale=0.5]{arch/access_channel.png}
+\end{center}
