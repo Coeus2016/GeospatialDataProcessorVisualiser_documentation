@@ -3,23 +3,23 @@ For the Layering pattern, the layers that will be used are
 \begin{enumerate}
 	\item Client
 		\begin{enumerate}
-			\item This layer will use the lower layers to have data delivered to it so that it can display the different functionality the user requires, which could range from queries to just simply interacting with a map to view what is going on around it.
+			\item This layer will use the lower layers to have data delivered to it so that it can display the different functionality the user requires in a user friendy manner, which could range from queries to just simply interacting with a map to view what is going on around it.
 		\end{enumerate}
 	\item Access
 		\begin{enumerate}
-			\item This layer will provide services to the Client layer. To do that ExpressJ, which is a NodeJS web application server framework, will be used.
+			\item This layer, which is a wrapping layer of the business processes layer, makes services available in a technology-neutral way over the Internet. ExpressJS, which is a NodeJS web application server framework, will be used.
 		\end{enumerate}
 	\item Business Processes
 		\begin{enumerate}
-			\item The Business Processes layer will help process requests received from the Client layer and will also contain an API server which will be used to extract data from weather APIs.
+			\item The Business Processes layer will help process requests and will also contain an API server which will be used to extract data from Third Party APIs.
 		\end{enumerate}
 	\item Persistence Access
 		\begin{enumerate}
-			\item This layer will use Thinky to write data to the Rethink database and RabbitMQ to queue messages to the business process layer.
-		\end{enumertae}
+			\item This layer will be used to access data from the persistence layer, using RabbitMQ to queue messages from the database and it will also be used to write data pulled from public web APIs to the database using Thinky.io.
+		\end{enumerate}
 	\item Persistence
 		\begin{enumerate}
-			\item The persistence layer will manage persistent real-time data which will have been acquired from public weather APIs. It would in turn supply data, via the Persistence Access Layer, to the Business Logic layer upon request and when there are updates to the requested data.
+			\item The persistence layer will manage persistent real-time data which will have been acquired from Third Party APIs. It would in turn supply data, via the Persistence Access Layer, to the Business Logic layer upon request and when there are updates to the requested data.
 		\end{enumerate}
 \end{enumerate}
 
