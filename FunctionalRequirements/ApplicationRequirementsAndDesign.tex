@@ -1,8 +1,8 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{graphicx}
 \graphicspath{ {../images/} }
-
-
+\usepackage{float}
+\renewcommand\thesection{\arabic{section}}
 \newcommand{\tab}[1]{\hspace{.1\textwidth}\rlap{#1}}
 
 \begin{document}
@@ -74,8 +74,8 @@
 			\\ & 				& Keletso Molefe 	&
 			\\ & 				& Kamogelo Tswene 	& \\ [1ex] 
 			\hline
-			v0.2 & 29 July 2016 & Maluleki Nyuswa	& Added service contracts, domain 
-			\\ & 				& Kamogelo Tswene 	& models, and activity diagrams  
+			v0.2 & 29 July 2016 & Maluleki Nyuswa	& Second Draft
+			\\ & 				& Kamogelo Tswene 	  
 			\\ & 				& 	&
 			\\ & 				&  	& \\ [1ex] 
 			\hline\hline
@@ -118,16 +118,19 @@
 		\subsection{Use Case Prioritization}
 		\input{use_case_prioritization}
 		
-		\subsection{Modular System}		
-			\subsubsection{Disaster Management Module}
-			\input{disaster_module}		
-			\subsubsection{Disaster Management Module}
-			\input{climate_module}			
-			\subsubsection{Authentication Module}
-			\input{auth_module} 
+	\section{Modular System}		
+		\subsection{Disaster Management Module}
+		\input{disaster_module}	
+
+	
+		\subsection{Climate Management Module}
+		\input{climate_module}	
+		
+		\subsection{Authentication Module}
+		\input{auth_module} 
 			
-		\subsection{Open Issues}
-		\input{issues}
+	\section{Open Issues}
+	\input{issues}
 	
 	%-------------------------------------------------------------------------------------
 	%		REFERENCES
