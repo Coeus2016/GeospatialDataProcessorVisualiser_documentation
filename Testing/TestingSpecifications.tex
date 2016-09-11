@@ -2,6 +2,18 @@
 \usepackage{graphicx}
 \graphicspath{ {../images/} }
 
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 \newcommand{\tab}[1]{\hspace{.1\textwidth}\rlap{#1}}
 
@@ -16,7 +28,6 @@
 	%----------------------------------------------------------------------------------------
 	%	TITLE SECTION
 	%----------------------------------------------------------------------------------------
-
 	
 	{ \huge \bfseries Testing Specifications}\\\HRule \\[0.4cm] % Title of your document
 	\Large \textbf{Real-time Geospatial Data Processor and Visualiser} \\
@@ -58,6 +69,8 @@
 	%-------------------------------------------------------------------------------------
 	\tableofcontents
 	\newpage
+	
+	
 	\section*{Document History}
 	\addcontentsline{toc}{section}{\protect\numberline{}Document History}
 	
@@ -69,7 +82,7 @@
 			Version & Date & Changed By & Summary \\ [0.5ex] % inserts table
 			%heading
 			\hline % inserts single horizontal line
-			v0.1 & 29 July 2016 & Nsovo Baloyi & First Draft 
+			v0.1 & 11 September 2016 & Nsovo Baloyi & First Draft 
 			\\ & & Maluleki Nyuswa &  
 			\\ & & Keletso Molefe &
 			\\ & & Kamogelo Tswene & \\ [1ex] 
@@ -87,56 +100,70 @@
 	\input{introduction}
 	
 	
+	
 %-------------------------------------------------------------------------------------
-	%		TEST SUMMARY
+	%		Test Items
 	%-------------------------------------------------------------------------------------
-	\section{Test Summary}	
-	\input{test-summary}
+	\section{Test Items}	
+	\input{test-items}	
 	
-	
-
-%-------------------------------------------------------------------------------------
-	%		TEST ASSESSMENT
-	%-------------------------------------------------------------------------------------
-	\section{Test Assessment}	
-	\input{test-assessment}
-	
-	
-	%-------------------------------------------------------------------------------------
-	%		TEST RESULTS
-	%-------------------------------------------------------------------------------------
-	\section{Test Results}	
-	\input{test-results}
 	
 	
 %-------------------------------------------------------------------------------------
-	%		VARIANCES
+	%		Functional Features to be Tested 
 	%-------------------------------------------------------------------------------------
-	\section{Variances}	
-	\input{variances}
+	\section{Functional Features to be Tested}	
+	\input{functional-features}	
 	
 	
-
+	
 %-------------------------------------------------------------------------------------
-	%		TEST INSTANCES
+	%		Test Cases
 	%-------------------------------------------------------------------------------------
-	\section{Test Instances}	
-	\input{test-instances}
-
-
-
+	\section{Test Cases}	
+	\input{test-cases}	
+	
+	
+	
 %-------------------------------------------------------------------------------------
-	%		RECOMMENDATIONS
+	%		Item Pass/Fail Criteria
 	%-------------------------------------------------------------------------------------
-	\section{Recommendations}	
-	\input{recommendations}
+	\section{Item Pass/Fail Criteria}	
+	\input{item-pass-fail-criteria}
 	
 	
+	
+%-------------------------------------------------------------------------------------
+	%		Test Deliverables
 	%-------------------------------------------------------------------------------------
-	%		APPENDICES
+	\section{Test Deliverables}	 
+	\input{test-deliverables}	
+
+	
+	
+	
+%-------------------------------------------------------------------------------------
+	%		Detailed Test Results
 	%-------------------------------------------------------------------------------------
+	\section{Detailed Test Results}	 
+	\input{detailed-test-results}	
 	
-	\section{Appendices}
-	\input{appendices}
 	
-		\end{document}
+	
+%-------------------------------------------------------------------------------------
+	%		Other
+	%-------------------------------------------------------------------------------------
+	\section{Other}	 
+	\input{other}	
+		
+		
+		
+		
+%-------------------------------------------------------------------------------------
+	%		Conclusions and Recommendations
+	%-------------------------------------------------------------------------------------
+	\section{Conclusions and Recommendations}	 
+	\input{conclusions-recommendations}	
+	
+	\end{document}
+	
