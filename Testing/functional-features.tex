@@ -1,0 +1,41 @@
+\subsection{Features Tested}
+\subsubsection{Disasters: back-end}
+\begin{itemize}
+
+	\item Earthquakes
+	\item Fires
+	\item Weather - back-end
+	
+\end{itemize}
+
+\subsubsection{Weather: back-end}
+\begin{itemize}
+
+	\item weather
+	
+\end{itemize}
+
+The Earthquakes and Fires disasters were tested against requirements to ascertain that the correct data is returned at the specified format (json object)for each function call. The response body should be an array, and the status should be 200. The parameters (start and end date) passed in to the time-query function should be in epoch time represented as an integer. All the test summarized on the table below are located the following folder; \url{https://github.com/Coeus2016/visualizer-server/test}.
+
+\begin{table}[h!]
+\caption{Summary to different test cases}
+\centering
+\begin{tabular}{| c c c c |}
+\hline
+Feature ID & RDS Source & Summary & Test Case ID \\ [0.5ex]
+\hline\hline
+1 & controllers.disasters.earthquakes.test & Passed & E01 \\
+2 & controllers.disasters.earthquakes.test & Passed & E02 \\
+3 & controllers.disasters.earthquakes.test & Passed & E03 \\
+4 & controllers.disasters.earthquakes.test & Passed & E04 \\
+5 & controllers.disasters.fires.test & Passed & F01 \\
+6 & controllers.disasters.fires.test & Passed & F02 \\
+7 & controllers.disasters.fires.test & Passed & F03 \\
+8 & controllers.disasters.fires.test & Passed & F04 \\
+9 & weather.test & Passed & W01 \\ [1ex]
+\hline
+\end{tabular}
+\end{table}
+
+
+

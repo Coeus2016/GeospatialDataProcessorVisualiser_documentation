@@ -1,0 +1,44 @@
+Each item tested must meet a certain criteria in order to pass. These criteria are as follows:
+
+\begin{itemize}
+
+	\item Front-End Web Interface
+			
+	\item Back-End Servers
+		\begin{itemize}
+			\item The server should start within 4000ms
+			\item The server should not shut-down on a failed request
+		\end{itemize}
+		\begin{itemize}
+			\item Disaster
+				\begin{itemize}
+					\item Earthquakes 
+						\begin{itemize}
+							\item Returns a json object
+							\item The query should execute within 6000ms
+						\end{itemize}
+					\item Fires
+						\begin{itemize}
+							\item Returns a json object
+							\item The query should execute within 6000ms
+						\end{itemize}
+				\end{itemize}
+			\item Weather
+				\begin{itemize}
+							\item Returns a json object
+							\item The query should execute within 5000ms
+						\end{itemize}
+		\end{itemize}
+		
+	\item Rabbit MQ
+		\begin{itemize}
+			\item All messages relayed on the channel must persist
+		\end{itemize}
+	\item User Authentication
+		\begin{itemize}
+			\item Any user can register
+			\item Registered users should be able to log-in
+			\item Unregistered user should be prohibited from logging-in
+		\end{itemize}
+	
+\end{itemize}

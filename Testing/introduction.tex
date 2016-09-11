@@ -1,4 +1,9 @@
-\subsection{Purpose}	
+This documentation is the testing documentation for the Geospatial Data Processor and Visualiser project. It outlines the entire testing plan and it documentation process. The documentation firstly establishes the scope, thereafter the testing environment is discussed including all the relevant assumptions and dependencies made during the testing process. The test items, functional features that were tested and the individual test cases are then discussed. Test conducted are then specified according to whether they passed or failed. Test deliverables are then clearly tabulated followed by detailed test results, and finally conclusions and recommendations are noted.
+
+\subsection{Purpose}
+
+This document combines the unit test plan and report into a single coherent artefact. The Geospatial Data Processor and Visualiser system aims to collects geospatial data from third party API's, persist the data on a database and thereafter visualise such in real-time through a web-interface. The system focuses mainly on natural disaster and weather visualisation. 
+
 
 Software testing forms an integral part of software design, intended to empirically verify whether the software being developed conforms to specifications. Unit testing test a piece of code in isolation against requirements and when done constructively it contributes to code flexibility and and reusability. Black-box testing was used as the tests were developed to contract specification. Test-driven devolopment(TTD) approach was followed during the project as it forms part of the agile development technique.
 
@@ -19,3 +24,42 @@ The benefits of unit testing include:
 	
 	\item[5]Improved Reusability leading to less code being developed and maintained
 \end{enumerate}
+
+\subsection{Scope}
+
+The scope of this document is structured as follows. The features that are considered for testing are listed in section 3. Individual tests that were identified from the requirements are
+discussed in detail in section 4. Furthermore, this document outlines the test environment
+and the risks involved in the testing approaches that were followed. Assumptions and
+dependencies of this test plan will also be mentioned. Section 7.1 and 9 outlines,
+discusses and concludes on the results of the tests, respectively.
+
+
+\subsection{Test Environment}
+
+This section of the document outlines the environment that existed during the unit testing.
+
+\begin{itemize}
+
+	\item Programming Languages:
+			AngularJS was primarily used during the development 		stage on the front-end, and NodeJS and ExpressJS on the back-end.
+	\item Testing Frameworks:
+			Mocha was the primary testing framework used on the back-end. It was chosen for it reach features and ease on testing NodeJS applications. Chai is a TDD assertion library for node and the browser, and was used for it delightfulness for pairing with any testing framework. SinnonJS was used to create mock objects and testing environment.
+	\item Coding Environment
+			IntelliJ version 9.0 Ultimatum Edition by Jetbrains was the coding IDEA of chose for the project development.
+	\item Operating System
+			All COEUS team members had the Windows 10 operating system by Microsoft installed on their laptops during the project development stage.
+	\item Internet Browsers
+			The web-interface was tested to execute accurately on GOOGLE Chrome, Mozilla Firefox and Internet Explorer web browser. 
+	
+\end{itemize}
+
+
+
+\subsection{Assumptions and Dependencies}
+\subsubsection{Assumptions}
+One of the few assumptions made during the testing was the internet download speed of not less than 5Mb/s. This was important for testing the performance requirements of the system.
+
+\subsubsection{Dependencies}
+
+
+
