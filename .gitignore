@@ -1,4 +1,5 @@
 *.pdf
+!Documents/*.pdf
 # Created by .ignore support plugin (hsz.mobi)
 ### Java template
 *.class

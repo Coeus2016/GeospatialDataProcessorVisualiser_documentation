@@ -1,5 +1,10 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{graphicx}
+
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{multirow}
+
 \graphicspath{ {../images/} }
 
 \usepackage[colorlinks = true,
@@ -41,7 +46,7 @@
 	\begin{minipage}{0.4\textwidth}
 	\begin{flushleft} \large
 	\includegraphics[width=\textwidth]{logo} \\[0.5cm]
-	{\large 29 July 2016}\\
+	{\large 14 October 2016}\\
 	{\large v0.1}
 	\end{flushleft}
 	\end{minipage}
@@ -82,7 +87,7 @@
 			Version & Date & Changed By & Summary \\ [0.5ex] % inserts table
 			%heading
 			\hline % inserts single horizontal line
-			v0.1 & 11 September 2016 & Nsovo Baloyi & First Draft 
+			v0.1 & 14 October 2016 & Nsovo Baloyi & Second Draft 
 			\\ & & Maluleki Nyuswa &  
 			\\ & & Keletso Molefe &
 			\\ & & Kamogelo Tswene & \\ [1ex] 
@@ -149,6 +154,11 @@
 	\input{detailed-test-results}	
 	
 	
+%-------------------------------------------------------------------------------------
+	%		Integration, System and Acceptance Test
+	%-------------------------------------------------------------------------------------
+	\section{Integration, System and Acceptance Test}	 
+	\input{integration-test}	
 	
 %-------------------------------------------------------------------------------------
 	%		Other
@@ -157,13 +167,19 @@
 	\input{other}	
 		
 		
-		
-		
 %-------------------------------------------------------------------------------------
 	%		Conclusions and Recommendations
 	%-------------------------------------------------------------------------------------
 	\section{Conclusions and Recommendations}	 
 	\input{conclusions-recommendations}	
+	
+
+%-------------------------------------------------------------------------------------
+	%		References
+	%-------------------------------------------------------------------------------------
+
+	%\section{References}	 
+	\input{references}	
 	
 	\end{document}
 	
