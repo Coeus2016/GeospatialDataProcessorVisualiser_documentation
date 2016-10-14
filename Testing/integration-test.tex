@@ -1,0 +1,37 @@
+\subsection{Integration Test}
+"The purpose of integration testing is verify functional, performance, and reliability requirements placed on major design items" \cite{integrationTest2}. Furthermore it tests the communication paths between different parts of the module to verify that all modules work correctly together \cite{integrationTest}.
+
+\subsubsection{Integration Test Cases}
+
+The Geospartial Data Processor and Visualizer system is divided into subsystem; user login, disaster and weather, with each subsystem divided into front-end and back-end module. The front-end module is the website interface whilst the back-end is the server and associated database. The integration test as observed from table two, tested the communication between associated modules e.g. weather front-end and back-end module. Such a test verified that messages were correctly passed correctly from the front-end to the back-end and vice-versa, the correct data was returned at the correct format and within the specified time. \\
+
+Below are simple test cases that were followed. Each test case followed a Top-Down testing approach. 
+
+
+\begin{table}[h!]
+\caption{Geospartial Data Processor and Visualiser - Integration Test Plan}
+%\centering
+\begin{tabular}{| p{1 cm} | p{3 cm} | p{3 cm} | p{2 cm} | p{2 cm} | p{2 cm} | p{2 cm} |}
+\hline
+Test No & Title & Type of Data Testing & Input & Expected Output & Actual Output & Comments \\ [0.5ex]
+\hline\hline
+1 & Data Scrapping & Invalid Data & 1 & Error message & error message & correct\\
+ &  & Valid Data & json object & json response & json response & correct\\
+\hline
+2 & User Login System & username and password & "michael" and mic@234 & user private page & user private page & correct\\
+ &  & invalid username or password & "michael" and @mic234 & error message & error message & correct\\
+\hline
+3 & Disaster Front-end Back-end modules & route request & localhost :3000/floods & floods data json response & floods data json response & correct\\
+\hline
+4 & Weather Front-end Back-end modules & route request &  localhost :3000/weath er & weather data json response & weather data json response & correct\\ [1ex]
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{System Test}
+
+A system test is too extensive, as it follows a black box testing approach for the entire system, and due to time constraints, for this project it was not conducted. Unit and Integration testing is thus deemed sufficient for this project. \\
+
+\subsection{Acceptance Test}
+
+Acceptance testing will be conducted 19 October 2016 with the client (CSIR) as part of a hand-over process.
