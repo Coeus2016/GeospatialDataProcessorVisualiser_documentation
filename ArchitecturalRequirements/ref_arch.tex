@@ -1,0 +1,35 @@
+Frameworks that are incorporated within our software architecture:
+	\begin{enumerate}
+		\item AngularJS
+			Description: AngularJS is a structural framework used for building dynamic web applications.
+			Reasons for using it:
+			\begin{itemize}
+				\item It is fully extensible, as it lets us extend HTML vocabulary for our application, and it works well with other libraries
+				\item It helps with communication between the client and server side, which is helpful fto us as the client and the server communicate regularly to ensure that all the requests made by the client are fulfilled. It tarns async callbacks with promises and deferreds. 
+				\item It makes it easy and quick to develop.
+				\item It offers two-way data binding between models and views. This data binding allows for an automatic update on both sides whenever there is a data change.
+			\end{itemize}
+			
+		\item ExpressJS
+			Description: ExpressJS is a web application framework that provides a set of features for web applications.
+			Reasons for using it:
+			\begin{itemize}
+				\item It is flexible and easy to use
+				\item It helps build back-end functions for web applications, which is important for our system as most of the system depends on the functions done in the back-end.
+			\end{itemize}
+			
+		\item Mocha 
+			Description: Mocha is a JavaScript test framework which runs on NodeJS
+			Reasons for using it:
+			\begin{itemize}
+				\item It is easier to test async code usind in the back-end. It can run tests in series and also trace exceptions to the right test cases.
+				\item It allows for use of any assertion library. In our case we use Mocha with Chai, which is a TDD asertion library.
+			\end{itemize}
+			
+		\item Jasmine
+			Description: Jasmine is a behavior-driven development framework.
+			Reasons for using it:
+			\begin{itemize}
+				\item We use it to test our AngularJS application because it has a clean and obvious syntax that makes it easy to write tests for our front-end code.
+			\end{itemize}
+	\end{enumerate}
