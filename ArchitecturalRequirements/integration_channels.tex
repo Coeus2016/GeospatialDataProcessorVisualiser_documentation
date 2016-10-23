@@ -4,16 +4,11 @@ The Real-time Geospatial Data Processor and Visualiser system will integrate wit
 		\item a database
 			\begin{enumerate}
 				\item The database will be used to store data which is pulled from the APIs.
-				\item The technology that will be used for the database is RethinkDB because it is scalable and will be able to store the massive amount of data that is pulled from the APIs; it allows for data from the APIs to be stored in real-time, meaning that the data stored would be the most up-to-date at all times (adding new data and updating data that already exists in the database) and it also allows the database to continuously push updated query results to applications in real-time. 
+				\item The technology that will be used for the database is RethinkDB because it is scalable and will be able to store the massive amount of data that is pulled from the APIs; it also allows for data from the APIs to be stored in real-time, meaning that the data stored would be the most up-to-date at all times (adding new data and updating data that already exists in the database) and it also allows the database to continuously push updated query results to applications in real-time. 
 			\end{enumerate}
 		\item a messaging service
 			\begin{enumerate}
 				\item Stores any messages to and from the web client, whether it is an update to the data the web client has already received, or is currently displaying or a new message consisting of different data to the one being currently shown.
 				\item In this case the system will integrate with technology, RabbitMQ, which will act as an intermediary for any incoming or outgoing data. 
-			\end{enumerate}
-		\item JavaScript Library
-			\begin{enumerate}
-				\item The library will be used to display dynamic maps in any web page
-				\item The technology that will be used will be OpenLayers 3, as it will help display map data in most modern browsers.The OpenLayers 3 will be pulling map data from openstreetmap.
 			\end{enumerate}
 	\end{enumerate}

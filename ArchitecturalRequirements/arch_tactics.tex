@@ -1,0 +1,51 @@
+Architectural tactics by definition are design decisions that influence the control of a quality attribute response. For the quality attributes identified above, the following are the design decisions that were chosen for some of the quality requirements.
+
+\subsection{Maintainability Tactics}
+	Maintainability tactics ensures that the system when modified will preserve its integrity. 
+	\begin{enumerate}
+		\item Documentation has to always be up to date throughout the entire development process. It should also be self explanatory and be accessible to all who need it.
+		\item Another strategy is to localize changes by decomposing all the system elements with clear responsibilities.
+	\end{enumerate}
+	
+\subsection{Scalability and Performance}
+	In order to ensure that resource demands are managed efficiently we would do so by: 
+		\begin{enumerate}
+			\item Reusing resources through using thread pooling and caching. In our system we use thread pooling in the backend system to access and retrieve documents from the database.   
+			\item Reducing the load using indexing and optimizing queries which will ensure efiiecient persistence and processing and will also greatly increase the overall speed of retrieving data from the database.
+		\end{enumerate}
+		
+\subsection{Reliability}
+	Reliability will be ensured through:
+	\begin{enumerate}
+		\item Preventing faults using resourc locking and removing single points of failure. This will be done by thorough unit and integration testing throughout development. 
+		\item Detecting faults using error/exception communication, in which case if a user wants to use a function/service that they are not authorized to use, an exception message will be communicated to them in a way that the user understands and is able to move forward from and through message integrity by checking that every message or input is valid and not malicious in anyway.
+	%\item Recovering from faults by fixing them, rolling back to a state where the system was stable and through maintaing backups.
+	\end{enumerate}
+	
+\subsection{Security}
+	\begin{enumerate}
+		\item Resisting attacks by limiting access through:
+			\begin{itemize}
+				\item Minimizing access channels, which at current the system can only be accessed through one access channel taht is the website
+				\item Authentication. In order to use any of the functionality in our system, one would need to be registered with the system so that they are able to login.
+				\item Authorization. Different users have different access control. A normal user would be able to view and query the system while an admin is able to modify any relevant system data.
+			\end{itemize}
+		\item Detecting Attacks through monitoring and logging events. 
+	\end{enumerate}
+	
+\subsection{Auditability}
+	Auditing will be ensured through
+	\begin{enumerate}
+		\item Monitoring and logging all messages processed by the system as well as all requests and responses for all the user services.  
+		\item Authentication. Every action performed will be linked to the person who has performed it, whether it be a request from a user, a response from the system or admin modifying system data.    
+	\end{enumerate}
+	
+\subsection{Testability}
+	\begin{itemize}
+		\item Separate interface from implementation. That would allow for substitution of implementations for various testing purposes and would also allow the remainder of the system to be tested in the absence of the component being stubbed.
+	\end{itemize}
+	
+\subsection{Usability}
+	\begin{itemize}
+		\item Usability will be ensured by making the interface easy to use and having a system that is not cluttered but only has functionality that is necessary.
+	\end{itemize}
