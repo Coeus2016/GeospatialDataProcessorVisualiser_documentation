@@ -8,6 +8,8 @@
     filecolor=magenta,      
     urlcolor=blue,
 }
+\usepackage{float}
+\renewcommand\thesection{\arabic{section}}
  
 \urlstyle{same}
 
@@ -38,8 +40,8 @@
 	\begin{minipage}{0.4\textwidth}
 	\begin{flushleft} \large
 	\includegraphics[width=\textwidth]{../logo} \\[0.5cm]
-	{\large 09 September 2016}\\
-	{\large v0.3}
+	{\large 22 October 2016}\\
+	{\large v0.4}
 	\end{flushleft}
 	\end{minipage}
 	~
@@ -91,6 +93,11 @@
 			\\ & & Maluleki Nyuswa &  
 			\\ & & Keletso Molefe &
 			\\ & & Kamogelo Tswene & \\ [1ex] 
+			\hline
+			v0.4 & 22 October 2016 & Nsovo Baloyi & Fourth  Draft 
+			\\ & & Maluleki Nyuswa &  
+			\\ & & Keletso Molefe &
+			\\ & & Kamogelo Tswene & \\ [1ex] 
 			\hline \hline
 		\end{tabular}
 		\label{table:nonlin} % is used to refer this table in the text
@@ -133,12 +140,13 @@
 	\input{arch_patterns}
 	
 	
-	%\section{Architectural Tactics}
+	\section{Architectural Tactics}
+	\input{arch_tactics}
 	%At this high level of abstraction, we do not specify any architectural tactics in order to concretely address the quality requirements for the system.
 	%\input{arch_tactics}
 	
-	%\section{Reference Architectures and Frameworks}
-	%\input{ref_arch}
+	\section{Reference Architectures and Frameworks}
+	\input{ref_arch}
 
 	\section{Access and Integration Channels}
 		\subsection{Integration Channels}
