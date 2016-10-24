@@ -7,12 +7,12 @@ Most unit tested conducted thus far are for the back-end server, four unit tests
 The tests we have created for this module are contained within the file
 located on \href{https://github.com}{Github} at the : \url{https://github.com/Coeus2016/visualizer-server/test}. The following results we re obtained from the tests conducted. The tests to produce the following results have passed and the reasons are stated below \\
 
-\subsubsection*{SERVER-DISASTER MODULE}
+\subsubsection*{SERVER-USER MODULE}
 
 \subsubsection{Test Case 1 (TC 4.1)}
 
 \begin{enumerate}
-	\item All the earthquakes data were returned.
+	\item The correct message stating that the user was already registered was returned.
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -21,8 +21,8 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 2 (TC 4.2)}
 
 \begin{enumerate}
-	\item All the earthquakes data returned was between the specified time period.
-	\item The returned data was in the correct format (json object).
+	\item A registered user was logged-in.
+	\item A correct text message token of the registered user was returned.
 \end{enumerate}
 
 \paragraph{Result :} Pass
@@ -30,7 +30,7 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 3 (TC 4.3)}
 
 \begin{enumerate}
-	\item All the earthquakes data returned was less than the specified time period.
+	\item All the earthquakes data residing on the database were returned. 
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -39,8 +39,8 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 4 (TC 4.4)}
 
 \begin{enumerate}
-	\item All the earthquakes data returned was greator than the specified time period.
-	\item The returned data was in the correct format (json object).
+	\item A response stating that a filter was inserted was returned.
+	\item The returned data was in the correct format (text).
 \end{enumerate}
 
 \paragraph{Result :} Pass
@@ -49,7 +49,7 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 5 (TC 4.5)}
 
 \begin{enumerate}
-	\item All the fires data were returned.
+	\item All earthquakes filtered by location were returned.
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -58,7 +58,7 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 6 (TC 4.6)}
 
 \begin{enumerate}
-	\item All the fires data returned was between the specified time period.
+	\item All the earthquakes data returned were filtered according to the past hour.
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -67,7 +67,7 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 7 (TC 4.7)}
 
 \begin{enumerate}
-	\item All the fires data returned was less than the specified time period.
+	\item All the earthquake data returned were filtered by date; current day's date.
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -76,7 +76,7 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 8 (TC 4.8)}
 
 \begin{enumerate}
-	\item All the fires data returned was greator than the specified time period.
+	\item All the earthquakes data returned were filtered according to the past day (24 hours).
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
@@ -87,7 +87,17 @@ located on \href{https://github.com}{Github} at the : \url{https://github.com/Co
 \subsubsection{Test Case 9 (TC 4.9)}
 
 \begin{enumerate}
-	\item All the weather data were returned.
+	\item All the earthquake data returned was filtered by the past 2 days.
+	\item The returned data was in the correct format (json object).
+\end{enumerate}
+
+\paragraph{Result :} Pass
+
+
+\subsubsection{Test Case 10 (TC 4.10)}
+
+\begin{enumerate}
+	\item All the earthquake data returned was filtered by the past 7 days.
 	\item The returned data was in the correct format (json object).
 \end{enumerate}
 
